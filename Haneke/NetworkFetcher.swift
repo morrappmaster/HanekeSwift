@@ -33,6 +33,11 @@ public class NetworkFetcher<T : DataConvertible> : Fetcher<T> {
         let key =  URL.absoluteString
         super.init(key: key)
     }
+
+    public init(URL: NSURL, key: String) {
+        self.URL = URL
+        super.init(key: key)
+    }
     
     public var session : NSURLSession { return NSURLSession.sharedSession() }
     
